@@ -1,13 +1,14 @@
-// import { useContext } from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import { AuthContext } from "../components/AuthProvider";
+import { AuthContext } from "../components/AuthProvider";
+import logo from "../assets/images/logo.png"
 
 const Navbar = () => {
-//   const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
-//   const handleLogOut = () => {
-//     logOut().then().catch();
-//   };
+  const handleLogOut = () => {
+    logOut().then().catch();
+  };
 
   const navLinks = (
     <>
@@ -56,9 +57,9 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-2xl  text-[#8F3034] font-bold">
-            <div className="flex flex-col">
-              <span className="md:text-5xl mr-2">Creative</span>
-              <span>Canvas Corner</span>
+            <div className="flex">
+              <img className="h-10 w-10" src={logo} alt="" />
+              <span>Bookworm Haven</span>
             </div>
           </a>
         </div>
@@ -68,7 +69,7 @@ const Navbar = () => {
 
 
         <div className="navbar-end">
-          {/* {user ? (
+          {user ? (
             <div className="flex items-center">
               <div className="relative group">
                 <Link to="/update">
@@ -91,7 +92,7 @@ const Navbar = () => {
                 Logout
               </button>
             </div>
-          ) : ( */}
+          ) : (
             <div className="flex items-center">
               {/* <img
                 className="h-16"
@@ -109,7 +110,7 @@ const Navbar = () => {
                 </button>
               </NavLink>
             </div>
-          {/* )} */}
+          )}
         </div>
       </div>
     </div>
