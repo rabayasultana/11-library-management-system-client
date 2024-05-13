@@ -58,6 +58,11 @@ const Register = () => {
         toast('Please give a lowercase letter');
         return;
     }
+    else if(!/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)){
+        setRegisterError('Your password should have at least one special character.');
+        toast('Please give a special character');
+        return;
+    }
 
     else if(!accepted){
         setRegisterError('Please accept our terms and conditions')
