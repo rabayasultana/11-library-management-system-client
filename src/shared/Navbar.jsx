@@ -16,14 +16,14 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="font-bold">
-        <NavLink to="/allArtCraft">All Art And Craft Items</NavLink>
+        <NavLink to="/addBook">Add Book</NavLink>
       </li>
 
       <li className="font-bold">
-        <NavLink to="/addCraftItem">Add Craft Item</NavLink>
+        <NavLink to="/allBooks">All Books</NavLink>
       </li>
       <li className="font-bold">
-        <NavLink to="/myArtCraft">My Art And Craft List</NavLink>
+        <NavLink to="/borrowedBooks">Borrowed Books</NavLink>
       </li>
     </>
   );
@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className="mb-10 h-[120px] pt-4">
       <div className="navbar">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown z-50">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +56,8 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-2xl  text-[#8F3034] font-bold">
-            <div className="flex">
+          <a className="btn btn-ghost text-2xl  text-sky-700 font-bold">
+            <div className="flex gap-3">
               <img className="h-10 w-10" src={logo} alt="" />
               <span>Bookworm Haven</span>
             </div>
@@ -71,7 +71,10 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center">
-              <div className="relative group">
+              <div className="flex items-center gap-2">
+              <span className="text-xl">
+                  {user?.displayName}
+                </span>
                 <Link to="/update">
                   <img
                     className="h-16 rounded-full"
@@ -81,26 +84,20 @@ const Navbar = () => {
                     alt=""
                   />
                 </Link>
-                <span className="absolute  opacity-0 group-hover:opacity-100 px-2 py-1 text-xl">
-                  {user?.displayName}
-                </span>
+                
               </div>
               <button
                 onClick={handleLogOut}
-                className="btn text-2xl bg-[#8F3034] text-white ml-1"
+                className="btn text-2xl bg-sky-700 text-white ml-1"
               >
                 Logout
               </button>
             </div>
           ) : (
             <div className="flex items-center">
-              {/* <img
-                className="h-16"
-                src="https://imgbb.host/images/DfdvE.png"
-                alt=""
-              /> */}
+              
               <NavLink to="/login">
-                <button className="btn bg-[#8F3034] text-xl text-white ml-1">
+                <button className="btn bg-sky-700 text-xl text-white ml-1">
                   Login
                 </button>
               </NavLink>
