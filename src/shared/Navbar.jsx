@@ -102,7 +102,7 @@ const Navbar = () => {
                 </button>
               </NavLink>
               <NavLink to="/register">
-                <button className="btn bg-[#8F3034] text-xl text-white ml-1">
+                <button className="btn bg-sky-700 text-xl text-white ml-1">
                   Register
                 </button>
               </NavLink>
