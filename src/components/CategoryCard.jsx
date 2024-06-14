@@ -34,7 +34,7 @@ const CategoryCard = ({category}) => {
             <span className="font-semibold">{interesting_fact}</span> 
           </p>
 
-          <Link to='/addBook' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
+          <Link to='/books' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
           Show Books on {name}
           </Link>
         </div>

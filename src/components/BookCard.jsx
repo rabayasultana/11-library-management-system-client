@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom"
+
 const BookCard = ({book}) => {
-    const { name, category, author } = book || {}
+    const { name, category, author, rating, image } = book || {}
     return (
-      <div className='w-full max-w-sm px-4 py-3 bg-white rounded-md shadow-md hover:scale-[1.05] transition-all'>
+      <div className='w-full max-w-sm px-4 py-8 mb-10 bg-white rounded-md shadow-md hover:scale-[1.05] transition-all'>
         <div className='flex items-center justify-between'>
           <span className='text-xs font-light text-gray-800 '>
             {author}
@@ -18,12 +20,17 @@ const BookCard = ({book}) => {
             {name}
           </h1>
   
-          <p className='mt-2 text-sm text-gray-600 '>
-            Lorem ipsum dolor sit adipisicing elit...
+         <div>
+         <img className="w-[200px] h-[250px] mx-auto my-8" src={image} alt="ert" />
+         </div>
+
+          <p className='mt-2 text-sm font-bold text-gray-600 pb-4'>
+            Rating: {rating}
           </p>
-          <p className='mt-2 text-sm font-bold text-gray-600 '>
-            Range: $100 - $150
-          </p>
+
+          <Link to='/bookDetails' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
+          Details
+          </Link>
         </div>
       </div>
     )

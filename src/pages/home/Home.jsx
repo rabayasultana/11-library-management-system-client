@@ -9,10 +9,8 @@ const Home = () => {
     console.log(categories)
     return (
         <div>
-            <Navbar></Navbar>
             <Banner></Banner>
             <TabCategories categories={categories}></TabCategories>
-            <Footer></Footer>
         </div>
     );
 };

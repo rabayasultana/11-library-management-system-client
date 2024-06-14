@@ -118,7 +118,6 @@ const Register = () => {
         <div className="">
 
             <ToastContainer/>
-      <Navbar></Navbar>
       <div className="animate__animated animate__fadeInUp">
         <h2 className="text-3xl mt-10 text-center">Please Register</h2>
 
@@ -210,7 +209,6 @@ const Register = () => {
           </span>
         </p>
       </div>
-      <Footer></Footer>
     </div>
     );
 };

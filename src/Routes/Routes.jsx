@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
+import Books from "../pages/Books";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,12 @@ const router = createBrowserRouter([
         {
             path: "/borrowedBooks",
             element: <PrivateRoute> </PrivateRoute>
-        }
+        },
+        {
+          path: "/books",
+          element: <Books></Books>,
+          loader: () => fetch('http://localhost:5000/books')
+      }
       ]
     },
   ]);

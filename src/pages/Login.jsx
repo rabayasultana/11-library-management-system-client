@@ -4,9 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from "../shared/Navbar";
 import SocialLogin from "../components/SocialLogin";
-import Footer from "../shared/Footer";
 import { AuthContext } from "../components/AuthProvider";
 const login = () => {
 
@@ -50,7 +48,6 @@ const login = () => {
     <div >
                 <title>Wanderlust | Login</title>
             <ToastContainer/>
-      <Navbar></Navbar>
       <div className="mb-10">
         <h2 className="text-3xl mt-10 text-center font-bold">Please Login</h2>
 
@@ -104,7 +101,6 @@ const login = () => {
         </p>
 <SocialLogin></SocialLogin>
       </div>
-      <Footer></Footer>
     </div>
   );
 };
