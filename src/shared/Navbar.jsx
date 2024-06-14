@@ -79,7 +79,7 @@ const Navbar = () => {
                   <img
                     className="h-16 rounded-full"
                     src={
-                      user?.photoURL || "https://imgbb.host/images/DfdvE.png"
+                      user?.photoURL || "https://i.ibb.co/swD0z2V/user.png"
                     }
                     alt=""
                   />

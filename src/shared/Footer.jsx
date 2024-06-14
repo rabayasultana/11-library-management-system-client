@@ -44,38 +44,32 @@ const Footer = () => {
          <div>
          <a href="https://www.facebook.com/groups/webdevelopmentbatch9/permalink/880573520504178">
             {" "}
-            <p>
+            
               <div className="flex items-center justify-center gap-4 text-2xl">
                 <MdFacebook />
                 <span>Facebook</span>
               </div>
-            </p>
+        
           </a>
           <a href="https://twitter.com/i/flow/login">
             {" "}
-            <p>
               <div className="flex items-center justify-center gap-4 text-2xl">
                 <FaTwitter />
                 <span>Twitter</span>
               </div>
-            </p>
           </a>
           <a href="https://github.com/">
-            <p>
               <div className="flex items-center justify-center gap-4 text-2xl">
                 <FaGithub />
                 <span>Github</span>
               </div>
-            </p>
           </a>
           <a href="https://telegram.org/">
             {" "}
-            <p>
               <div className="flex items-center justify-center gap-4 text-2xl">
                 <FaTelegram />
                 <span>Telegram</span>
               </div>
-            </p>
           </a>
          </div>
         </div>

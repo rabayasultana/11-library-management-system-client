@@ -14,7 +14,9 @@ const router = createBrowserRouter([
       children: [
         {
           path: '/', 
-          element: <Home></Home> 
+          element: <Home></Home>,
+          loader: () => fetch('http://localhost:5000/categories')
+          // loader: () => fetch(`${import.meta.env.VITE_API_URL}/books`)
         },
         {
             path: "/login",

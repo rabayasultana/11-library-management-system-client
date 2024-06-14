@@ -78,7 +78,7 @@ const Register = () => {
           toast('User Created Successfully');
         console.log(result)
           const user = {email};
-          fetch('https://assignment-10-painting-server.vercel.app/user',{
+          fetch('http://localhost:5000/user',{
               method: 'POST',
               headers: {
                   'content-type': 'application/json'
