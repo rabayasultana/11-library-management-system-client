@@ -1,8 +1,20 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import CategoryCard from './CategoryCard';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const TabCategories = ({ categories }) => {
+const TabCategories = () => {
+
+const [categories, setCategories] = useState([])
+useEffect(() => {
+  const getData = async () => {
+    const { data } = await axios('http://localhost:5000/categories')
+    setCategories(data)
+  }
+  getData()
+}, [])
+
     return (
         <div className='container px-6 py-10 mx-auto'>
             <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl">Browse Books By Categories</h1>

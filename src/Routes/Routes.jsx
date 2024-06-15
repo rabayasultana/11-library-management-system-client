@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         {
           path: '/', 
           element: <Home></Home>,
-          loader: () => fetch('http://localhost:5000/categories')
+          // loader: () => fetch('http://localhost:5000/categories')
           // loader: () => fetch(`${import.meta.env.VITE_API_URL}/books`)
         },
         {
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         {
           path: "/books",
           element: <Books></Books>,
-          loader: () => fetch('http://localhost:5000/books')
+          // loader: () => fetch('http://localhost:5000/books')
       }
       ]
     },
