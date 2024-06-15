@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom"
 
 const BookCard = ({book}) => {
-    const { name, category, author, rating, image } = book || {}
+    const { _id, name, category, author, rating, image } = book || {}
     return (
       <div className='w-full max-w-sm px-4 py-8 mb-10 bg-white rounded-md shadow-md hover:scale-[1.05] transition-all'>
         <div className='flex items-center justify-between'>
@@ -28,7 +28,7 @@ const BookCard = ({book}) => {
             Rating: {rating}
           </p>
 
-          <Link to='/bookDetails' className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
+          <Link to={`/books/${_id}`} className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
           Details
           </Link>
         </div>
