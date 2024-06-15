@@ -6,9 +6,12 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        lato: "'Lato', sans-serif",
+      colors: {
+        green: "#198754",
       },
+      fontFamily: {
+        lato: '"Lato", sans-serif',
+      }
     },
   },
   plugins: [
