@@ -3,18 +3,18 @@ import Main from "../Layout/Main";
 import Home from "../pages/home/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import NotFound from "../pages/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import Books from "../pages/Books";
 import BookDetails from "../pages/BookDetails";
 import AddBook from "../pages/AddBook";
 import AllBooks from "../pages/AllBooks";
 import UpdateBook from "../pages/UpdateBook";
+import ErrorPage from "../pages/ErrorPage";
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
-      errorElement: <NotFound></NotFound>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: '/', 
