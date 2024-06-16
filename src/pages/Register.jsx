@@ -7,8 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import auth from "../firebase/firebase.config";
-import Navbar from "../shared/Navbar";
-import Footer from "../shared/Footer";
 import { AuthContext } from "../components/AuthProvider";
 
 const Register = () => {
