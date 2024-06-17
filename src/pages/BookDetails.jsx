@@ -93,7 +93,7 @@ const handleBorrow = async () => {
 {/* Borrow button for modal */}
 <div>
   {/* Open the modal using JavaScript function */}
-  <button className="btn bg-green text-white capitalize w-full px-5 py-4 mt-4 transition-colors duration-300 transform rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onClick={openModal1}>Borrow</button>
+  <button className="px-5 py-4 mt-4  capitalize  rounded-md w-full btn btn-outline bg-green text-white" onClick={openModal1}>Borrow</button>
 
   <dialog id="my_modal_1" className="modal">
     <div className="modal-box">
@@ -121,7 +121,7 @@ const handleBorrow = async () => {
           <input type="date" name="date" placeholder="date" className="input input-bordered" />
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-green text-white capitalize w-full px-5 py-4 mt-4 transition-colors duration-300 transform rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500" onClick={handleBorrow}
+          <button className="px-5 py-4 mt-4  capitalize  rounded-md lg:w-auto btn btn-outline bg-green text-white" onClick={handleBorrow}
               disabled={quantity === 0}>Confirm</button>
 
           <button onClick="document.getElementById('my_modal_1').close()" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
