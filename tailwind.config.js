@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        green: "#198754",
+        green: "#043E32",
       },
       fontFamily: {
         lato: '"Lato", sans-serif',

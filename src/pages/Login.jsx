@@ -1,53 +1,51 @@
-import {  useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import SocialLogin from "../components/SocialLogin";
 import { AuthContext } from "../components/AuthProvider";
 const login = () => {
+  const [loginError, setLoginError] = useState("");
+  const [success, setSuccess] = useState("");
 
-  const [loginError, setLoginError] = useState('');
-    const [success, setSuccess] = useState('');
+  const { signIn } = useContext(AuthContext);
 
-    const { signIn }  = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location?.state ? location.state : "/";
 
-    const location = useLocation();
-    const navigate = useNavigate();
-    const from = location?.state ? location.state : '/';
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        const form = new FormData(e.currentTarget);
-        const email = form.get('email');
-        const password = form.get('password');
+    // reset error and success
+    setLoginError("");
+    setSuccess("");
 
-        // reset error and success
-        setLoginError('');
-        setSuccess('');
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        setSuccess("User Logged in Successfully");
+        toast("User Logged in Successfully");
 
-        signIn(email, password)
-        .then(result => {
-            console.log(result.user);
-                setSuccess('User Logged in Successfully');
-                toast('User Logged in Successfully');
-
-            // navigate after login
-            setTimeout(() => navigate(from), 1000);
-        })
-        .catch(error => {
-            console.error(error);
-            setLoginError(error.message);
-            toast('Something Went wrong Please try again');
-        })
-      }
-
+        // navigate after login
+        setTimeout(() => navigate(from), 1000);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoginError(error.message);
+        toast("Something Went wrong Please try again");
+      });
+  };
 
   return (
-    <div >
-                <title>Wanderlust | Login</title>
-            <ToastContainer/>
+    <div>
+      <title>Wanderlust | Login</title>
+      <ToastContainer />
       <div className="mb-10">
         <h2 className="text-3xl mt-10 text-center font-bold">Please Login</h2>
 
@@ -81,25 +79,21 @@ const login = () => {
             />
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn btn-outline bg-green text-white w-full text-xl">Login</button>
           </div>
         </form>
 
-            {
-                loginError && <p className="text-red-700">{loginError}</p>
-            }
+        {loginError && <p className="text-red-700">{loginError}</p>}
 
-            {
-                success && <p className="text-green-600">{success}</p>
-            }
+        {success && <p className="text-green-600">{success}</p>}
 
         <p className="text-center mt-4">
           Do not have an account? Please
-          <span className="text-blue-800 font-bold">
+          <span className="text-green font-bold">
             <Link to="/register"> Register</Link>
           </span>
         </p>
-<SocialLogin></SocialLogin>
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );

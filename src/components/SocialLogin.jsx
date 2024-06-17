@@ -14,7 +14,7 @@ const SocialLogin = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log("google", result.user);
+        // console.log("google", result.user);
         if (result.user) {
           navigate(from);
         }
@@ -28,7 +28,7 @@ const SocialLogin = () => {
   const handleGithubSignIn = () => {
     signInWithGithub()
       .then((result) => {
-        console.log("github", result.user);
+        // console.log("github", result.user);
         if (result.user) {
           navigate(from);
         }
@@ -45,7 +45,7 @@ const SocialLogin = () => {
       <div className="p-4 space-y-3 my-10  w-2/5 mx-auto">
         <button
           onClick={handleGoogleSignIn}
-          className="btn btn-outline btn-primary w-full"
+          className="btn btn-outline bg-green text-white w-full text-xl"
         >
           <FaGoogle></FaGoogle>
           Google
@@ -54,7 +54,7 @@ const SocialLogin = () => {
         {/* github */}
         <button
           onClick={handleGithubSignIn}
-          className="btn btn-outline btn-primary w-full "
+          className="btn btn-outline bg-green text-white w-full text-xl"
         >
           <FaGithub></FaGithub>
           Github

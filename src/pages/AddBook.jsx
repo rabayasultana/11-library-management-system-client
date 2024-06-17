@@ -63,7 +63,7 @@ const AddBook = () => {
       <h2 className="text-5xl text-center font-bold mb-8">Add Books</h2>
       <div className="bg-red-50 p-16 mb-10 w-3/4 mx-auto">
         <form onSubmit={handleAddBooks} className="space-y-2">
-          {/* Form email and name row */}
+          {/* Form book name and author name */}
           <div className="md:flex md:gap-4">
             <label className="form-control md:w-1/2">
               <div className="label">
@@ -98,7 +98,7 @@ const AddBook = () => {
                 <span className="label-text">Quantity</span>
               </div>
               <input
-                type="text"
+                type="number"
                 name="quantity"
                 placeholder="Quantity"
                 className="input input-bordered w-full"
@@ -111,7 +111,7 @@ const AddBook = () => {
                 <span className="label-text">Price</span>
               </div>
               <input
-                type="text"
+                type="number"
                 name="price"
                 placeholder="price"
                 className="input input-bordered w-full"
@@ -132,7 +132,7 @@ const AddBook = () => {
                 name="category"
                 placeholder="Select a category"
               >
-                <option value="">Select</option>
+                <option value="">Select a category</option>
                 <option value="Computers and Tech">Computers and Tech</option>
                 <option value="Sci-Fi and Fantasy">Sci-Fi and Fantasy</option>
                 <option value="Travel and Adventure">
@@ -169,7 +169,7 @@ const AddBook = () => {
                 name="rating"
                 placeholder="Give a rating"
               >
-                <option value="">Select</option>
+                <option value="">Select a rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

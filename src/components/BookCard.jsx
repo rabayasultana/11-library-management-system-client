@@ -55,7 +55,7 @@ const BookCard = ({book}) => {
           {/* Show Update button only on update route (assuming '/books/:id/update') */}
           {(currentPath === "/allBooks") && (
             <Link
-              to={`/books/${_id}/update`}
+              to={`/books/${_id}/updateBook`}
               className="w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500"
             >
               Update
