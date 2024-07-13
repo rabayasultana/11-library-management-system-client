@@ -31,10 +31,10 @@ const BookCard = ({book}) => {
             Rating: {rating}
           </p>
 
-          {/* <Link to={`/books/${_id}`} className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
+          {/* <Link to={`/books/${_id}`} className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-green rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
           Details
           </Link>
-          <Link className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-sky-700 rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
+          <Link className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-green rounded-md lg:w-auto hover:bg-pink-400 focus:outline-none focus:bg-gray-500'>
           Update
           </Link> */}
 

@@ -14,7 +14,7 @@ const Slide = ({image, text}) => {
             {text}
           </h1>
           <br />
-          <Link to='/addBook' className='w-full px-5 py-4 mt-4 text-sm font-medium text-sky-700 capitalize transition-colors duration-300 transform bg-white rounded-md lg:w-auto hover:bg-pink-200 focus:outline-none focus:bg-gray-500'>
+          <Link to='/addBook' className='w-full px-5 py-4 mt-4 text-sm font-medium text-green capitalize transition-colors duration-300 transform bg-white rounded-md lg:w-auto hover:bg-pink-200 focus:outline-none focus:bg-gray-500'>
             Add your favorite books
           </Link>
         </div>

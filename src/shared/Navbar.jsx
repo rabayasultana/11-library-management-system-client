@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../components/AuthProvider";
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -56,7 +56,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-2xl  text-sky-700 font-bold">
+          <a className="btn btn-ghost text-2xl  text-green font-bold">
             <div className="flex gap-3">
               <img className="h-10 w-10" src={logo} alt="" />
               <span>Bookworm Haven</span>
@@ -67,42 +67,35 @@ const Navbar = () => {
           <ul className="menu menu-horizontal">{navLinks}</ul>
         </div>
 
-
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center">
               <div className="flex items-center gap-2">
-              <span className="text-xl">
-                  {user?.displayName}
-                </span>
+                <span className="text-xl">{user?.displayName}</span>
                 <Link to="/update">
                   <img
                     className="h-16 rounded-full"
-                    src={
-                      user?.photoURL || "https://i.ibb.co/swD0z2V/user.png"
-                    }
+                    src={user?.photoURL || "https://i.ibb.co/swD0z2V/user.png"}
                     alt=""
                   />
                 </Link>
-                
               </div>
               <button
                 onClick={handleLogOut}
-                className="btn text-2xl bg-sky-700 text-white ml-1"
+                className="btn text-2xl bg-green text-white ml-1"
               >
                 Logout
               </button>
             </div>
           ) : (
             <div className="flex items-center">
-              
               <NavLink to="/login">
-                <button className="btn bg-sky-700 text-xl text-white ml-1">
+                <button className="btn bg-green text-xl text-white ml-1">
                   Login
                 </button>
               </NavLink>
               <NavLink to="/register">
-                <button className="btn bg-sky-700 text-xl text-white ml-1">
+                <button className="btn bg-green text-xl text-white ml-1">
                   Register
                 </button>
               </NavLink>

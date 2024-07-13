@@ -1,11 +1,11 @@
 import { MdFacebook } from "react-icons/md";
-import { FaCopyright, FaGithub, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTelegram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer
-      className="px-24 py-8 bg-[#8F3034] text-neutral-content"
+      className="px-24 py-8 bg-green text-neutral-content"
       data-aos="fade-up"
     >
       <div className="footer text-neutral-content">
@@ -43,7 +43,6 @@ const Footer = () => {
           <div className="mt-8">&copy; 2024. All Rights Reserved.</div>
          <div>
          <a href="https://www.facebook.com/groups/webdevelopmentbatch9/permalink/880573520504178">
-            {" "}
             
               <div className="flex items-center justify-center gap-4 text-2xl">
                 <MdFacebook />
@@ -52,7 +51,6 @@ const Footer = () => {
         
           </a>
           <a href="https://twitter.com/i/flow/login">
-            {" "}
               <div className="flex items-center justify-center gap-4 text-2xl">
                 <FaTwitter />
                 <span>Twitter</span>
@@ -65,7 +63,6 @@ const Footer = () => {
               </div>
           </a>
           <a href="https://telegram.org/">
-            {" "}
               <div className="flex items-center justify-center gap-4 text-2xl">
                 <FaTelegram />
                 <span>Telegram</span>

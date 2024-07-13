@@ -7,11 +7,14 @@ import { Link } from "react-router-dom";
 const AllBooks = () => {
     const [books, setBooks] = useState([]);
     const [view, setView] = useState("card"); 
+    const [filteredBooks, setFilteredBooks] = useState(books);
+
   
     useEffect(() => {
       const getData = async () => {
         const { data } = await axios.get("http://localhost:5000/books");
         setBooks(data);
+        setFilteredBooks(data);
       };
       getData();
     }, []);
@@ -19,6 +22,11 @@ const AllBooks = () => {
     const handleViewChange = (event) => {
       setView(event.target.value);
     };
+
+    const handleFilterBooks = () => {
+        const availableBooks = books.filter((book) => book.quantity > 0);
+        setFilteredBooks(availableBooks);
+      };
   
     const renderBooks = () => {
       switch (view) {
@@ -26,7 +34,7 @@ const AllBooks = () => {
           return (
             <div>
             <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
-            {books.map(book => (
+            {filteredBooks.map(book => (
               <BookCard key={book._id} book={book}></BookCard>
             ))}
             </div>
@@ -51,7 +59,7 @@ const AllBooks = () => {
                   </thead>
                   <tbody>
                     {/* Row 1 */}
-                    {books.map((book) => (
+                    {filteredBooks.map((book) => (
                       <tr key={book._id} className="border border-green">
                         <th></th>
                         <td className="border border-green">{book.name}</td>
@@ -85,6 +93,7 @@ const AllBooks = () => {
     return (
         <div className="m-16">
         <div className="text-center justify-center">
+        <button onClick={handleFilterBooks} className="px-5 py-4 my-4  capitalize  rounded-md lg:w-auto btn btn-outline bg-green text-white">Available books</button>
         <div className="mb-2">
                 <span className="label-text text-xl">Select based On Card view or Table view</span>
               </div>

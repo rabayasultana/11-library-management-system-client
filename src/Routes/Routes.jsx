@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/addBook",
-            element: <AddBook></AddBook>
+            element: <PrivateRoute><AddBook></AddBook></PrivateRoute>
         },
         {
             path: "/allBooks",
@@ -50,7 +50,8 @@ const router = createBrowserRouter([
       {
         path: "/books/:id",
         element: <BookDetails></BookDetails>,
-         loader: ({params}) => fetch(`http://localhost:5000/books/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/books/${params.id}`)
+        //  loader: ({params}) => fetch(`http://localhost:5000/books/details/${params.id}`)
     },
     {
       path: "/books/:id/updateBook",
