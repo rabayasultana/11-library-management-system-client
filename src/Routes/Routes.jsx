@@ -11,6 +11,7 @@ import AllBooks from "../pages/AllBooks";
 import UpdateBook from "../pages/UpdateBook";
 import ErrorPage from "../pages/ErrorPage";
 import BorrowedBooks from "../pages/BorrowedBooks";
+import ReviewCard from "../pages/home/ReviewCard";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -60,23 +61,26 @@ const router = createBrowserRouter([
       },
       {
         path: "/books/:id",
-        element: (
+        element: 
           <PrivateRoute>
             <BookDetails></BookDetails>
-          </PrivateRoute>
-        ),
+          </PrivateRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/books/${params.id}`),
       },
       {
         path: "/books/:id/updateBook",
-        element: (
+        element:
           <PrivateRoute>
             <UpdateBook></UpdateBook>
-          </PrivateRoute>
-        ),
+          </PrivateRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/books/${params.id}`),
+      },
+      {
+        path: "/reviewCard",
+        element: <ReviewCard></ReviewCard>
+        
       },
     ],
   },

@@ -2,6 +2,7 @@
 import Banner from "../../components/Banner";
 import TabCategories from "../../components/TabCategories";
 import About from "./About";
+import Review from "./Review";
 
 const Home = () => {
 
@@ -10,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <TabCategories></TabCategories>
             <About></About>
+            <Review></Review>
         </div>
     );
 };

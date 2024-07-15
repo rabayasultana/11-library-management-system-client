@@ -61,7 +61,7 @@ const AddBook = () => {
   return (
     <div>
       <h2 className="text-5xl text-center font-bold mb-8">Add Books</h2>
-      <div className="bg-red-50 p-16 mb-10 w-3/4 mx-auto">
+      <div className="bg-yellow-100 p-16 mb-10 w-3/4 mx-auto">
         <form onSubmit={handleAddBooks} className="space-y-2">
           {/* Form book name and author name */}
           <div className="md:flex md:gap-4">
