@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import Rating from "react-rating";
 import { Link } from "react-router-dom"
 
 const BookCard = ({book}) => {
@@ -28,7 +29,10 @@ const BookCard = ({book}) => {
          </div>
 
           <p className='mt-2 text-sm font-bold text-gray-600 pb-4'>
-            Rating: {rating}
+            <Rating
+  initialRating={rating}
+  readonly
+/>
           </p>
 
 
