@@ -9,7 +9,7 @@ const BookCard = ({book}) => {
 
     const { _id, name, category, author, rating, image } = book || {}
     return (
-      <div className='w-full max-w-sm px-4 py-8 mb-10 bg-white rounded-md shadow-md hover:scale-[1.05] transition-all'>
+      <div className='w-full max-w-sm px-4 py-8 mb-10 bg-white rounded-md shadow-md hover:scale-[1.05] transition-all mx-auto'>
         <div className='flex items-center justify-between'>
           <span className='text-xs font-light text-gray-800 '>
             {author}

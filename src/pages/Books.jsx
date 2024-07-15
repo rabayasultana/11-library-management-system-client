@@ -26,7 +26,7 @@ const filteredBooks = selectedCategory
     
     return (
         <div>
-            <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 mt-8  md:grid-cols-2 lg:grid-cols-3">
       {filteredBooks.map(book => (
         <BookCard key={book._id} book={book}></BookCard>
       ))}
