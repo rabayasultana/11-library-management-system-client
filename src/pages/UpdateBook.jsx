@@ -15,7 +15,8 @@ const UpdateBook = () => {
     const rating = form.rating.value;
     const photo = form.photo.value;
 
-    const UpdatedBook = { bookName, authorName, category, rating, photo };
+    const updatedBook = { bookName, authorName, category, rating, photo };
+    updatedBook.updateType = 'update';
     // console.log(UpdatedBook);
 
     // send data to the server
@@ -24,7 +25,7 @@ const UpdateBook = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(UpdatedBook),
+      body: JSON.stringify(updatedBook),
     })
       .then((res) => res.json())
       .then((data) => {

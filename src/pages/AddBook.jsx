@@ -12,8 +12,8 @@ const AddBook = () => {
     const form = event.target;
 
     const email = user.email;
-    const bookName = form.bookName.value;
-    const authorName = form.authorName.value;
+    const name = form.name.value;
+    const author = form.author.value;
     const price = parseFloat(form.price.value);
     const category = form.category.value;
     const description = form.description.value;
@@ -24,8 +24,8 @@ const AddBook = () => {
 
     const newBook = {
       email,   
-      bookName,
-      authorName,
+      name,
+      author,
       price,
       category,
       description,
@@ -71,7 +71,7 @@ const AddBook = () => {
               </div>
               <input
                 type="text"
-                name="bookName"
+                name="name"
                 placeholder="Book Name"
                 className="input input-bordered w-full"
               />
@@ -84,7 +84,7 @@ const AddBook = () => {
               </div>
               <input
                 type="text"
-                name="authorName"
+                name="author"
                 placeholder="Author Name"
                 className="input input-bordered w-full"
               />
