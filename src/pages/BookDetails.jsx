@@ -71,7 +71,7 @@ const BookDetails = () => {
       console.log(updatedBook);
     
 
-    // send data to the server
+    // update data to the server
     fetch(`http://localhost:5000/books/${_id}`, {
       method: "PUT",
       headers: {

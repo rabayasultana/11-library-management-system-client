@@ -4,14 +4,11 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../components/AuthProvider";
 
 const BorrowedBooks = () => {
-
   const { user } = useContext(AuthContext) || {};
 
   const email = user.email;
 
   const [borrowedBook, setBorrowedBook] = useState([]);
-  // const [returnedBook, setReturnedBook] = useState([]);
-  // const { _id } = returnedBook;
   const [control, setControl] = useState([false]);
 
   useEffect(() => {
@@ -43,39 +40,19 @@ const BorrowedBooks = () => {
             if (data.deletedCount > 0) {
               console.log(id, name);
 
-          
+              // update data to the server
+              fetch(`http://localhost:5000/books?search=${name}`, {
+                method: "PUT",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(),
+              })
+                .then((res) => res.json())
+                .then((data) => {
+                  console.log(data);
+                });
               // }
-
-              
-    //             fetch(`http://localhost:5000/books/${name}/:${id}`)
-    //               .then((res) => res.json())
-    //               .then((data) => {
-    //                 console.log(data)
-    //               })
-    //               .catch((error) => {
-    //                 console.error(error);
-    //               });
-
-      
-    //               // console.log(returnedBook)
-              
-    //               returnedBook.updateType = 'quantityIncrease';
-    //               console.log(returnedBook);
-
-
-    //                 // send data to the server
-    // fetch(`http://localhost:5000/books/${_id}`, {
-    //   method: "PUT",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(returnedBook),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   }) 
-    //   // }
               // sweet alert
               Swal.fire(
                 "Returned!",
