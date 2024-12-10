@@ -10,7 +10,7 @@ const AllBooks = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get("http://localhost:5000/books");
+      const { data } = await axios.get("https://assignment-11-library-server.vercel.app/books");
       setBooks(data);
       setFilteredBooks(data);
     };

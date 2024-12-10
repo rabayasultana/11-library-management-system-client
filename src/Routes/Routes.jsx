@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        // loader: () => fetch('http://localhost:5000/categories')
+        // loader: () => fetch('https://assignment-11-library-server.vercel.app/categories')
         // loader: () => fetch(`${import.meta.env.VITE_API_URL}/books`)
       },
       {
@@ -51,13 +51,13 @@ const router = createBrowserRouter([
             <BorrowedBooks></BorrowedBooks>
           </PrivateRoute>
         ),
-          loader: () => fetch('http://localhost:5000/books')
-        //  loader: ({params}) => fetch(`http://localhost:5000/borrowedBooks/${params.email}`)
+          loader: () => fetch('https://assignment-11-library-server.vercel.app/books')
+        //  loader: ({params}) => fetch(`https://assignment-11-library-server.vercel.app/borrowedBooks/${params.email}`)
       },
       {
         path: "/books",
         element: <Books></Books>,
-        // loader: () => fetch('http://localhost:5000/books')
+        // loader: () => fetch('https://assignment-11-library-server.vercel.app/books')
       },
       {
         path: "/books/:id",
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
             <BookDetails></BookDetails>
           </PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.id}`),
+          fetch(`https://assignment-11-library-server.vercel.app/books/${params.id}`),
       },
       {
         path: "/books/:id/updateBook",
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
             <UpdateBook></UpdateBook>
           </PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.id}`),
+          fetch(`https://assignment-11-library-server.vercel.app/books/${params.id}`),
       },
       {
         path: "/reviewCard",

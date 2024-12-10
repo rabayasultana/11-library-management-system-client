@@ -12,7 +12,7 @@ const BorrowedBooks = () => {
   const [control, setControl] = useState([false]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/borrowedBooks/${email}`)
+    fetch(`https://assignment-11-library-server.vercel.app/borrowedBooks/${email}`)
       .then((res) => res.json())
       .then((data) => setBorrowedBook(data))
       .catch((error) => {
@@ -32,7 +32,7 @@ const BorrowedBooks = () => {
       confirmButtonText: "Yes, return it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/borrowedBooks/delete/${id}`, {
+        fetch(`https://assignment-11-library-server.vercel.app/borrowedBooks/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -41,7 +41,7 @@ const BorrowedBooks = () => {
               console.log(id, name);
 
               // update data to the server
-              fetch(`http://localhost:5000/books?search=${name}`, {
+              fetch(`https://assignment-11-library-server.vercel.app/books?search=${name}`, {
                 method: "PUT",
                 headers: {
                   "content-type": "application/json",

@@ -38,7 +38,7 @@ const AddBook = () => {
 
 
     // send data to the server
-    fetch("http://localhost:5000/books", {
+    fetch("https://assignment-11-library-server.vercel.app/books", {
       method: "POST",
       headers: {
         "content-type": "application/json",

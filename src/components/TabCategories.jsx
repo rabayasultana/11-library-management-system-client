@@ -9,7 +9,7 @@ const TabCategories = () => {
 const [categories, setCategories] = useState([])
 useEffect(() => {
   const getData = async () => {
-    const { data } = await axios('http://localhost:5000/categories')
+    const { data } = await axios('https://assignment-11-library-server.vercel.app/categories')
     setCategories(data)
   }
   getData()

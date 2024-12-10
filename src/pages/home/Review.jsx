@@ -26,7 +26,7 @@ const Review = () => {
     console.log(newReview);
 
     // send data to the server
-    fetch("http://localhost:5000/review", {
+    fetch("https://assignment-11-library-server.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

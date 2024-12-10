@@ -76,7 +76,7 @@ const Register = () => {
           toast('User Created Successfully');
         console.log(result)
           const user = {email};
-          fetch('http://localhost:5000/user',{
+          fetch('https://assignment-11-library-server.vercel.app/user',{
               method: 'POST',
               headers: {
                   'content-type': 'application/json'

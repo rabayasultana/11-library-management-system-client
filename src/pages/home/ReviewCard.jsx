@@ -6,7 +6,7 @@ const ReviewCard = () => {
     const [reviews, setReviews] = useState([]);
   useEffect(() => {
     const getReview = async () => {
-      const { data } = await axios("http://localhost:5000/review");
+      const { data } = await axios("https://assignment-11-library-server.vercel.app/review");
       setReviews(data);
     };
     getReview();

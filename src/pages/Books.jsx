@@ -13,7 +13,7 @@ const Books = () => {
 
 useEffect(() => {
   const getData = async () => {
-    const { data } = await axios('http://localhost:5000/books')
+    const { data } = await axios('https://assignment-11-library-server.vercel.app/books')
     setBooks(data)
   }
   getData()

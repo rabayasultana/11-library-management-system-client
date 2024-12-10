@@ -54,7 +54,7 @@ const BookDetails = () => {
 
 
  // send data to the server
- fetch("http://localhost:5000/borrowedBooks", {
+ fetch("https://assignment-11-library-server.vercel.app/borrowedBooks", {
   method: "POST",
   headers: {
     "content-type": "application/json",
@@ -72,7 +72,7 @@ const BookDetails = () => {
     
 
     // update data to the server
-    fetch(`http://localhost:5000/books/${_id}`, {
+    fetch(`https://assignment-11-library-server.vercel.app/books/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
